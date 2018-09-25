@@ -6,4 +6,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index')->name('home');
+Route::get('/home', 'AdminController@index')->name('home');
