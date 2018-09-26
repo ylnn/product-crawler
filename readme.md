@@ -13,9 +13,20 @@ Copy **.env.example** file to **.env**
 Then update database settings in **.env** file.
 ```
 composer install
+php artisan key:generate
 php artisan migrate 
 php artisan db:seed
 ```
+
+Permission settings for Ubuntu OS:
+```
+sudo chown -R YOUR_USERNAME:www-data storage
+sudo chown -R YOUR_USERNAME:www-data bootstrap/cache
+
+sudo chmod -R gu+w storage
+sudo chmod -R gu+w bootstrap/cache
+```
+
 
 ## Panel address
 You can add/delete crawling sources in admin panel.
